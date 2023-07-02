@@ -1,0 +1,345 @@
+<section  class="hero">
+    <div class="container-fluid">
+<div class="hero-slider mx-auto">
+    <div class="slider-content">
+        <div class="slider-title">
+            <h1 class="d-inline-block">Music to fill your</h1> <span class="text-primary">heart.</span>
+        </div>
+        <div class="slider-breif pt-2">
+            <p>Get playlists and albums inspired by the artists and genres you're listing to. 1 month free.</p>
+        </div>
+        <div class="slider-readmore">
+            <button type="button" class="btn bg-white btn-lg">Try it free</button>
+            <button type="button" class="btn btn-outline-dark btn-lg mx-3 ">Discover</button>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+<section class="Feature ">
+    <div class="container ">
+        <div  class="Featureintro-title text-center">
+            <h1 class="d-inline-block">Features of </h1> <span class="text-primary">Listen App</span>
+        </div>
+        <div class="featureintro-breif text-center">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sit aliquid molestiae sint ab illo.</p>
+        </div>
+        <div  class="features-items mt-5">
+            <div class="row">
+   
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="feature-box card">
+                        <div class="feature-icon iconlayer2 ">
+                            <i class="fa fa-comments-o"></i>
+                        </div>
+                        <div class="feature-title pt-4">
+                    <h5>Millions of songs</h5>
+                        </div>
+                        <div class="feature-breif">
+                    <p>
+                        Lorem ipsum dolor sit amet elit adipisicing. consectetur maiores Exercitationem.
+
+                    </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="feature-box card">
+                        <div class="feature-icon iconlayer3">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <div class="feature-title pt-4">
+                            <h5>Comments & reviews                            </h5>
+
+                        </div>
+                        <div class="feature-breif">
+                            <p>
+                                Accusamus hic dolorem dicta illum quod. Sunt voluptatum assumenda atque praesentium.
+        
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="feature-box card">
+                        <div class="feature-icon iconlayer4">
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+                        <div class="feature-title pt-4">
+                            <h5>Musical events
+                            </h5>
+
+                        </div>
+                        <div class="feature-breif">
+                    <p>Nesciunt aliquid vitae, asperiores unde soluta quia, commodi ad voluptatum pariatur.                    </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="feature-box card">
+                        <div class="feature-icon iconlayer5">
+                            <i class="fa fa-soundcloud"></i>
+                        </div>
+                        <div class="feature-title pt-4">
+                            <h5>Data analytics</h5>
+                        </div>
+                        <div class="feature-breif">
+                    <p>Ratione vel sit corrupti atque natus dolores amet architecto sequi? Tenetur.
+
+                    </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="feature-box card">
+                        <div class="feature-icon iconlayer6">
+                            <i class="fa fa-credit-card"></i>
+                        </div>
+                        <div class="feature-title pt-4">
+                            <h5>Live streaming</h5>
+                        </div>
+                        <div class="feature-breif">
+                    <p>Mollitia temporibus fuga est atque harum quod dolorum inventore distinctio!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="feature-box card">
+                        <div class="feature-icon iconlayer7">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="feature-title pt-4">
+                            <h5>Subscription plan
+                    </h5>
+                        </div>
+                        <div class="feature-breif">
+                    <p>Mollitia temporibus fuga est atque harum quod dolorum inventore distinctio!
+
+                    </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-5">
+                    <div class="feature-box card">
+                        <div class="feature-icon iconlayer1">
+                            <i class="fa fa-music"></i>
+                        </div>
+                        <div class="feature-title pt-4">
+                            <h5>User management
+
+                            </h5>
+                        </div>
+                        <div class="feature-breif">
+                    <p>Dolorum aut reprehenderit facere quia dolore nesciunt aliquam voluptatem distinctio.
+
+                    </p>
+                        </div>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="events">
+    <div class="container">
+<div class="events-intro d-flex justify-content-between">
+    <div class="eventsintrotitle">
+        <h1 class="d-inline-block">Upcoming</h1> <span class="text-primary">Events</span>
+    </div>
+    <div class="explore">
+        <button type="button" class="btn btn-outline-primary">Explore all events</button>
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col-lg-4 col-sm-6 col-12 mb-3" *ngFor="let event of events; let i=index">
+<div class="event-image" *ngFor="let eventimage of events[i].images.slice(0,1)">
+    <img  src="{{eventimage.url}}" alt="{{event.name}}">
+</div>
+<div class="event-address pt-2">
+    <i class="fa fa-map-marker mx-2" aria-hidden="true"></i> <p class="d-inline-block">{{event._embedded.venues[0].address.line1}}</p>
+</div>
+<div class="event-title">
+    <h5>{{event.name}}</h5>
+</div>
+<div class="userjoinevents d-flex justify-content-between pt-3">
+    <div class="usersparticapte">
+        <img src="../../assets/images/user1.jpg">
+        <img src="../../assets/images/user2.jpg">
+        <img src="../../assets/images/user3.jpg">  
+        <p class="d-inline-block pt-2">+1</p>  
+    </div>
+    <div class="joinbtn ">
+        <a href="" class="btn btn-sm btn-light-primary">Join Event</a>
+    </div>
+</div>
+    </div>
+</div>
+</div>
+</section>
+<section class="Plans" id="target">
+    <div class="container">
+        <div class="text-center">
+            <div class="plan-introtitle">
+                <h1 class="d-inline-block">Flexible</h1> <span class="text-primary">Plans</span>
+                </div>
+    </div>
+<div class="plan-box">
+    <div class="row">
+<div class="col-lg-4 col-sm-12 ">
+    <div class="trial">
+        <div class="trial-title">
+            <h3>Free <span class="text-primary p-0">Trial</span></h3>
+        </div>
+        <div class="trial-breif">
+            <p  class="pt-4">Your <strong>Free Trial</strong> subscription plan will terminate in 10 days, kindly select your plan.</p>
+        </div>
+        <div class="trial-image">
+            <img src="../../assets/images/plan.png">
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-sm-6 pb-4 ">
+    <div class="plan-item mx-4">
+    <div class="plan-title">
+        <i class="fa fa-music me-4"></i>
+        <h5 class="d-inline-block pt-2">Ads</h5> <span class="text-primary">free</span>
+    </div>
+    <div class="plan-feature">
+<p class="plansubreif">What you'll get</p>
+<br>
+<div class="plan-feature-items">
+    <ul class="p-0">
+        <li><i class="fa fa-check-circle me-2" aria-hidden="true"></i><p class="d-inline-block">Access all free songs and app features</p></li>
+        <li><i class="fa fa-check-circle me-2" aria-hidden="true"></i><p class="d-inline-block">No Ads between songs</p></li>
+    </ul>   
+</div>
+<div class="price-plan">
+    <h5 class="d-inline-block">$10.99</h5><p class="d-inline-block">/year</p>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg">Choose</button>
+
+</div>
+    </div>
+   </div> 
+</div>
+<div class="col-lg-4 col-sm-6 ">
+    <div class="plan-item bordernone">
+        <div class="plan-title">
+            <i class="fa fa-credit-card me-2"></i>
+            <h5 class="d-inline-block pt-2">Premium</h5>
+        </div>
+        <div class="plan-feature">
+    <p class="plansubreif">What you'll get</p>
+    <br>
+    <div class="plan-feature-items">
+        <ul class="p-0">
+            <li><i class="fa fa-check-circle me-2" aria-hidden="true"></i><p class="d-inline-block">Access all free songs and app features</p></li>
+            <li><i class="fa fa-check-circle me-2" aria-hidden="true"></i><p class="d-inline-block">No Ads between songs</p></li>
+            <li><i class="fa fa-check-circle me-2" aria-hidden="true"></i><p class="d-inline-block">Create playlist & access analytics</p></li>
+            <li><i class="fa fa-check-circle me-2" aria-hidden="true"></i><p class="d-inline-block">Listen paid song once & purchase</p></li>
+            <li><i class="fa fa-check-circle me-2" aria-hidden="true"></i><p class="d-inline-block">Download and listen offline</p></li>
+        </ul>   
+    </div>
+    <div class="price-plan">
+        <h5 class="d-inline-block">$99.99</h5><p class="d-inline-block">/year</p>
+        <br>
+        <button type="button" class="btn btn-primary btn-lg">Choose</button>
+    
+    </div>
+        </div>
+       </div>  
+</div>
+</div>
+</div>
+    </div>
+</section>
+
+<section class="Artists ">
+    <div class="container ">
+        <div  class="Artistsintro-title text-center">
+            <h1 class="d-inline-block">Trending  </h1> <span class="text-primary">Artists</span>
+        </div>
+        <div class="Artistsintro-breif text-center pt-3">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sit aliquid molestiae sint ab illo.
+            </p>
+        </div>
+
+            <owl-carousel-o [options]="customOptions" class="artistslider" >
+                <ng-container  *ngFor="let artist of artists;index as i;"   >
+                    <ng-template    *ngIf="artist.images.length>0"    carouselSlide [id]="artist.id">
+                        <div [class]="artist.images.length>0?'':'d-none'" >
+                        <div     *ngFor="let image of artist.images.slice(0,1);index as i">
+                            <div class="artist-image text-center">
+                                <img [src]="image.url" [alt]="artist.name" [title]="artist.name">
+                                <p class="pt-4">{{artist.name}}</p>
+                            </div>
+</div>
+</div>
+                    </ng-template>
+                  </ng-container>
+            
+              </owl-carousel-o>
+    </div>
+</section>
+<section class="articles">
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="article-introtitle">
+                <h1 class="d-inline-block">Latest</h1> <span class="text-primary">Articles</span>
+            </div>
+            <div class="explore">
+                    <button type="button" class="btn btn-outline-primary">Explore all blogs</button>
+                </div>
+        </div>   
+
+        <div class="articlesitems">
+            <div class="row mt-4">
+                <div class="col-lg-4 col-6 mb-3" *ngFor="let article of articles.slice(0,3)">
+                    <div class="article-item" >
+<div class="articleimage">
+    <img class="w-100" [src]="article.urlToImage">
+</div>
+<div class="article-date pt-2">
+<p>{{article.publishedAt | date: 'MMM d, y'}}</p>
+</div>
+<div class="article-title">
+    <h5>{{article.title}}</h5>
+</div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+<section class="joinus text-center">
+  <div class="container">
+    <div class="joinus-box">
+        <div class="joinustitle">
+            <h1 class="d-inline-block txtwhite">Join with</h1> <span class="textblack mx-3">Listen app</span>
+        </div>
+        <div class="joinusbreif">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias explicabo harum perspiciatis voluptates sed ut.</p>
+        </div>
+        <div class="joinusdiscover">
+            <button type="button" class="btn bg-white btn-lg mt-3 " style="width: 224px;color: black;">register</button>
+
+        </div>
+    </div>
+  </div>  
+</section>
+<section class="store text-center">
+    <div class="container">
+        <div class="store-header mb-md-5 pb-sm-5 ">
+           <h5 class="text-primary d-inline-block mx-2 ">Millions of songs</h5><h5 class="d-inline-block">that you access with your basic information.</h5>  
+  <div class="store-items mt-4">
+    <button type="button" class="btn bg-white btn-lg mt-3 " style="width: 180px;color: black;"><i class="fa fa-google-plus" aria-hidden="true"></i>
+        Google Play</button>
+    <button type="button" class="btn bg-white btn-lg mt-3 " style="width: 180px;color: black;"><i class="fa fa-apple" aria-hidden="true"></i>
+        App Store</button>
+
+  </div>
+        </div>
+    </div>
+</section>
+<!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1TfqLAPs4K3s2rJMoCokcS?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->

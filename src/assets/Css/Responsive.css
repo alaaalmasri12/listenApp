@@ -1,0 +1,77 @@
+@media only screen and (max-width :768px) {
+     .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    .navbar-toggler 
+    {
+        position: absolute;
+    top: 15px;
+    right: 35px;
+    }
+    .hero-slider {
+        height: 330px !important;
+        width: 100% !important;  
+        background-position: center left;
+    }
+    .slider-content {
+        padding-left: 5% !important;
+        padding-top: 8% !important;
+    }
+     .slider-title h1 {
+        font-size: 40px !important;
+    }
+    .featureintro-breif {
+        width: 100% !important;
+    }
+    .feature-box {
+        width: 250px !important; 
+    }
+    .event-image img {
+        width: 255px !important;
+        /* margin: 0 auto; */
+        height: 180px !important;
+    }
+    .trial {
+        left: 12px !important;
+        position: relative !important;
+        bottom: 62px !important;
+        width: 443px !important;
+    }
+    .trial-image
+    {
+        text-align: center;
+    }
+    .price-plan button {
+        width: 160px !important;
+        height: 40px !important;
+        padding: 0px !important;
+    }
+    .plan-feature-items {
+        height: 280px !important;
+    }
+    .articleimage img {
+        height: 160px !important;
+    }
+    .joinusbreif {
+        width: 80% !important;
+    }
+    .joinus-box {
+        padding-top: 40px !important;
+    }
+    .plan-feature-items p
+    {
+font-size: 11px;
+    }
+    .store-header {
+        width: 100% !important;
+    }
+.about-video iframe
+{
+  width: 500px !important;
+    height: 300px !important;
+    margin: 0 auto;
+}
+.team-introbreif {
+    width: 100% !important;
+}
+}

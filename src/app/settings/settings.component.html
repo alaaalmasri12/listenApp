@@ -1,0 +1,45 @@
+<button class="btn btn-primary settings" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">settings</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Theme Settings</h5>
+  </div>
+  <div class="offcanvas-body">
+    <span>Theme</span>
+    <br>
+    <div class="colors mb-4">
+        <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'whitebg' }" (click)="toggle('whitebg')" style="background-color: #fff;"></button>
+        <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'blackbg' }" (click)="toggle('blackbg')"style="background-color: black;"></button>
+    </div>
+    <span class="mt-2">Header</span>
+    <br>
+    <div class="colors mb-4">
+        <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'yelloheaderbg' }" (click)="toggle('yelloheaderbg')" style="background-color: #f3c848;"></button>
+        <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'orangeheaderbg' }" (click)="toggle('orangeheaderbg')"style="background-color: #f7591d;"></button>
+        <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'redheaderbg' }" (click)="toggle('redheaderbg')" style="background-color: #e72412;"></button>
+        <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'greenheaderbg' }" (click)="toggle('greenheaderbg')"style="background-color:#178037;"></button>
+        <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'blueheaderbg' }" (click)="toggle('blueheaderbg')" style="background-color: #196eed;"></button>
+        <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'purpleheaderbg' }" (click)="toggle('purpleheaderbg')"style="background-color: #ad20d4;"></button>
+        </div>
+  <span class="mt-2">Sidebar</span>
+
+  <div class="colors mb-4">
+    <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'yelloSidebar' }" (click)="toggle('yelloSidebar')" style="background-color: #f3c848;"></button>
+    <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'orangSidebar' }" (click)="toggle('orangSidebar')"style="background-color: #f7591d;"></button>
+    <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'redhSidebar' }" (click)="toggle('redhSidebar')" style="background-color: #e72412;"></button>
+    <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'greenSidebar' }" (click)="toggle('greenSidebar')"style="background-color:#178037;"></button>
+    <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'blueSidebar' }" (click)="toggle('blueSidebar')" style="background-color: #196eed;"></button>
+    <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'purpleSidebar' }" (click)="toggle('purpleSidebar')"style="background-color: #ad20d4;"></button>
+    </div>
+    <span class="mt-2">Player</span>
+
+    <div class="colors mb-4">
+      <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'yelloPlayer' }" (click)="toggle('yelloPlayer')" style="background-color: #f3c848;"></button>
+      <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'orangePlayer' }" (click)="toggle('orangePlayer')"style="background-color: #f7591d;"></button>
+      <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'redPlayer' }" (click)="toggle('redPlayer')" style="background-color: #e72412;"></button>
+      <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'greenPlayer' }" (click)="toggle('greenPlayer')"style="background-color:#178037;"></button>
+      <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'bluePlayer' }" (click)="toggle('bluePlayer')" style="background-color: #196eed;"></button>
+      <button class="colorcircle" [ngClass]="{ 'active' : isValue == 'purplehPlayer' }" (click)="toggle('purplehPlayer')"style="background-color: #ad20d4;"></button>
+      </div>
+</div>
+</div>

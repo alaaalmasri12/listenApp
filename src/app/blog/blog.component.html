@@ -1,0 +1,68 @@
+<section class="blog">
+    <div class="container">
+        <div class="blog-intro-title  text-center">
+            <h1 class="d-inline-block">The</h1>
+            <h1 class="text-primary d-inline-block">Blog</h1>
+        </div>
+        <div class="blog-intro-breif text-center pt-2">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sit aliquid molestiae sint ab illo.
+            </p>
+        </div>
+        <div class="blog-search">
+            <input type="text" class="form-control" placeholder="Search Anything here">
+        </div>
+        <div class="categories text-center mt-5 mb-5">
+            <button class="btn  btn-light-primary" type="submit">All</button>
+            <button class="btn  btn-light-primary" type="submit">Music</button>
+            <button class="btn  btn-light-primary" type="submit">Podcast</button>
+            <button class="btn  btn-light-primary" type="submit">Radio</button>
+            <button class="btn  btn-light-primary" type="submit">Trending</button>
+        </div>
+        <div class="heroarticle" *ngFor="let article of blogarticles.slice(0,1)">
+            <div class="articleheroimage">
+                <img [src]="article.urlToImage">
+            </div>
+            <div class="articlehero-date">
+                <p>{{article.publishedAt | date: 'MMM d, y'}}</p>
+            </div>
+            <div class="article-title">
+                <h5>{{article.title}}</h5>
+            </div>
+            <div class="article-breif pt-3 pb-3">
+                <p>{{article.content}}</p>
+            </div>
+            <div class="article-user d-flex">
+                <div class="article-user-image">
+                    <img src="../../assets/images/user1.jpg">
+                </div>
+                <div class="article-author">
+                    <p>{{article.author}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="" style="clear:both;"></div>
+        <div class="row mt-4 mb-4">
+            <div class="col-lg-4 col-12 mb-4" *ngFor="let article of blogarticleslist.slice(1,blogarticleslist.length)">
+                <div class="article-image">
+                    <img class="w-100"  [src]="article.urlToImage">
+
+                </div>
+                <div class="article-date pt-3">
+                    <p>{{article.publishedAt | date: 'MMM d, y'}}</p>
+
+                </div>
+                <div class="article-title">
+                    <h5>{{article.title}}</h5>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination" >
+              <li class="page-item"><a class="page-link" (click)="previous()" >Previous</a></li>
+              <li class="page-item"  *ngFor="let article of blogarticleslist.slice(1,blogarticleslist.length);let i = 'index+1'" [ngClass]="{ 'active' : isactive == i }" (click)="setactive(i)"><a class="page-link" style="cursor:pointer" (click)="getArticlesbysize(i)" >{{i}}</a></li>
+              <li class="page-item"><a class="page-link" (click)="next()">Next</a></li>
+            </ul>
+          </nav>
+    </div>
+</section>
