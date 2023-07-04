@@ -1,0 +1,90 @@
+<section class="contactus text-center">
+    <div class="ContactUs">
+        <div class="container">
+            <div class="contactustitle">
+                <h1 class="d-inline-block">Get In</h1>
+                <h1 class="text-primary d-inline-block">Touch</h1>        
+            </div>
+            <div class="Contactusbreif">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sit aliquid molestiae sint ab illo.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-9 card contactusform ">
+                  <form [formGroup]="Contactform" (ngSubmit)="ContactUsubmit(Contactform)">
+
+                    
+                    <div class="row g-3">
+                      <div class="col-md-6 text-start">
+                        
+                        <label>first name</label>
+        <input type="text" class="form-control mt-3"   placeholder="John"  formControlName="firstname">
+        <small class="alert alert-danger d-block mt-2" *ngIf="Contactform.get('firstname')?.getError('required') && Contactform.get('firstname')?.touched">firstname is required</small>
+
+                      </div>
+                      <div class="col-md-6 mt-4 text-start">
+                        <label for="lastname" class="form-label">Last name</label>
+                        <input type="text" class="form-control"  placeholder="Doe" formControlName="lastname" >
+                        <small class="alert alert-danger d-block mt-2" *ngIf="Contactform.get('lastname')?.getError('required') && Contactform.get('lastname')?.touched">lastname is required</small>
+                    </div>
+                      <div class="col-md-6 text-start">
+                        <label for="mail" class="form-label">Mail</label>
+                        <input type="mail" class="form-control" formControlName="mail" placeholder="johndoe@xzy.com"  >
+                        <small class="alert alert-danger d-block mt-2" *ngIf="Contactform.get('mail')?.getError('required') && Contactform.get('mail')?.touched">Mail is required</small>
+                        <small class="alert alert-danger d-block mt-2" *ngIf="Contactform.get('mail')?.getError('email') && Contactform.get('mail')?.touched">invaild email </small>
+
+                      </div>
+                      <div class="col-md-6 text-start">
+                        <label for="Phonenumber" class="form-label">Phone number</label>
+                        <input type="text" class="form-control"  formControlName="Phonenumber" placeholder="962 xxxx xxx xx" >
+                        <small class="alert alert-danger d-block mt-2" *ngIf="Contactform.get('Phonenumber')?.getError('required') && Contactform.get('Phonenumber')?.touched">Phonenumber is required</small>
+
+                      </div>
+                      <div class="col-12 text-start">
+                        <label for="Message" class="form-label">Message</label>
+                        <textarea class="form-control" placeholder="Write here..." formControlName="Message"   rows="5" ></textarea>
+                        <small class="alert alert-danger d-block mt-2" *ngIf="Contactform.get('Message')?.getError('required') && Contactform.get('Message')?.touched">Message is required</small>
+                      </div>
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-md-12 text-center">
+                            <button  type="submit" [disabled]="Contactform.invalid" class="btn btn-primary btn-lg" >Send message</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+    </div>
+</div>
+</section>
+<section class="joinus text-center">
+    <div class="container">
+      <div class="joinus-box">
+          <div class="joinustitle">
+              <h1 class="d-inline-block txtwhite">Join with</h1> <span class="textblack mx-3">Listen app</span>
+          </div>
+          <div class="joinusbreif">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias explicabo harum perspiciatis voluptates sed ut.</p>
+          </div>
+          <div class="joinusdiscover">
+              <button type="button" class="btn bg-white btn-lg mt-3 " style="width: 224px;color: black;">register</button>
+  
+          </div>
+      </div>
+    </div>  
+  </section>
+  <section class="store text-center">
+    <div class="container">
+        <div class="store-header mb-md-5 pb-sm-5 ">
+           <h5 class="text-primary d-inline-block mx-2 ">Millions of songs</h5><h5 class="d-inline-block">that you access with your basic information.</h5>  
+  <div class="store-items mt-4">
+    <button type="button" class="btn bg-white btn-lg mt-3 " style="width: 180px;color: black;"><i class="fa fa-google-plus" aria-hidden="true"></i>
+        Google Play</button>
+    <button type="button" class="btn bg-white btn-lg mt-3 " style="width: 180px;color: black;"><i class="fa fa-apple" aria-hidden="true"></i>
+        App Store</button>
+
+  </div>
+        </div>
+    </div>
+</section>

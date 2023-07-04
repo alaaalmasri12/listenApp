@@ -8,6 +8,11 @@
     top: 15px;
     right: 35px;
     }
+
+    .blog-intro-breif {
+        width: 100% !important;
+    }
+  
     .hero-slider {
         height: 330px !important;
         width: 100% !important;  

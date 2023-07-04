@@ -1,3 +1,4 @@
+import { query } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
@@ -7,6 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class ArticlesService {
 
+  title:string="";
   constructor(private _HttpClient:HttpClient) { 
     
   }
@@ -14,10 +16,15 @@ export class ArticlesService {
   {
     return this._HttpClient.get("https://newsapi.org/v2/everything?q=music&sortBy=popularity&apiKey=f7c960d24e2f485481ff2c6f1b5e9094")
   }
-  getArticlesbysize(Pagenumber:any):Observable<any>
+  getArticlesbysize(Pagenumber:any,title:any):Observable<any>
   {
-    return this._HttpClient.get(`https://newsapi.org/v2/everything?q=music&sortBy=popularity&apiKey=f7c960d24e2f485481ff2c6f1b5e9094&page=${Pagenumber}&pageSize=9 `)
+    this.title="music"
+    return this._HttpClient.get(`https://newsapi.org/v2/everything?q=${this.title}&sortBy=popularity&apiKey=f7c960d24e2f485481ff2c6f1b5e9094&page=${Pagenumber}&pageSize=9 `)
   }
 
- 
+  getArticlesbytitle(title:any):Observable<any>
+  {
+    return this._HttpClient.get(`https://newsapi.org/v2/everything?q=${title}&sortBy=popularity&apiKey=f7c960d24e2f485481ff2c6f1b5e9094&pageSize=9 `)
+  }
+
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgxSpinner, NgxSpinnerService } from 'ngx-spinner';
 import { SettingsService } from './settings.service';
 
 @Component({
@@ -7,6 +8,20 @@ import { SettingsService } from './settings.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private spinner: NgxSpinnerService)
+  {
+
+  }
+
+  ngOnInit() {
+    /** spinner starts on init */
+    this.spinner.show();
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 5000);
+  }
   colorstyle:string="test";
 
   addItem(newItem: string) {

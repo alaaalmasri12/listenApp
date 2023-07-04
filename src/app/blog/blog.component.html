@@ -8,16 +8,16 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus sit aliquid molestiae sint ab illo.
             </p>
         </div>
-        <div class="blog-search">
-            <input type="text" class="form-control" placeholder="Search Anything here">
+        <div class="blog-search mb-5">
+            <input type="text" class="form-control" [(ngModel)]="query"  name="query" (keyup.enter)="searchbytitle($event)" placeholder="Search Anything here">
         </div>
-        <div class="categories text-center mt-5 mb-5">
+        <!-- <div class="categories text-center mt-5 mb-5">
             <button class="btn  btn-light-primary" type="submit">All</button>
             <button class="btn  btn-light-primary" type="submit">Music</button>
             <button class="btn  btn-light-primary" type="submit">Podcast</button>
             <button class="btn  btn-light-primary" type="submit">Radio</button>
             <button class="btn  btn-light-primary" type="submit">Trending</button>
-        </div>
+        </div> -->
         <div class="heroarticle" *ngFor="let article of blogarticles.slice(0,1)">
             <div class="articleheroimage">
                 <img [src]="article.urlToImage">
@@ -42,7 +42,7 @@
         </div>
         <div class="" style="clear:both;"></div>
         <div class="row mt-4 mb-4">
-            <div class="col-lg-4 col-12 mb-4" *ngFor="let article of blogarticleslist.slice(1,blogarticleslist.length)">
+            <div class="col-lg-4 col-6 mb-4" *ngFor="let article of blogarticleslist.slice(1,blogarticleslist.length)">
                 <div class="article-image">
                     <img class="w-100"  [src]="article.urlToImage">
 

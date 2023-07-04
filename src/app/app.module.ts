@@ -13,6 +13,13 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SettingsComponent } from './settings/settings.component';
 import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
+import { FormsModule } from '@angular/forms';
+import { ContactusComponent } from './contactus/contactus.component'
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { ToastrModule } from 'ngx-toastr';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,15 +28,20 @@ import { BlogComponent } from './blog/blog.component';
     HomeComponent,
     SettingsComponent,
     AboutComponent,
-    BlogComponent
+    BlogComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    ReactiveFormsModule,
+    NgxSpinnerModule,
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
