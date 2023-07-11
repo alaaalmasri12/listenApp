@@ -1,6 +1,7 @@
 import { query } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import jwtDecode from 'jwt-decode';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -10,7 +11,7 @@ export class ArticlesService {
 
   title:string="";
   constructor(private _HttpClient:HttpClient) { 
-    
+   
   }
   getArticles():Observable<any>
   {
@@ -26,5 +27,6 @@ export class ArticlesService {
   {
     return this._HttpClient.get(`https://newsapi.org/v2/everything?q=${title}&sortBy=popularity&apiKey=f7c960d24e2f485481ff2c6f1b5e9094&pageSize=9 `)
   }
+ 
 
 }

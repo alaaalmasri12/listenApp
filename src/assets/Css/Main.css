@@ -909,3 +909,41 @@ color: rgb(87, 89, 91)
   height: auto;
   box-shadow: 0 0 3rem #1517191a;
 }
+
+.register, .login {
+  padding-top: 42px;
+  padding-bottom: 42px;
+  background: linear-gradient(to right, #f4f8fe 50%, transparent 50%);
+  height: auto;}
+
+.register-card,.login-card {
+  background-color: #fff;
+  padding: 40px;
+  border: none;
+  box-shadow: 0 0 3rem #1517191a;
+  width: 31rem;
+  margin: 0 auto;
+}
+.breif-intro 
+{
+  color: #57595b;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+  border-color: #e72412;
+  padding-right: calc(1.45em + 0.875rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.3625em + 0.21875rem) center;
+  background-size: calc(0.725em + 0.4375rem) calc(0.725em + 0.4375rem);
+}
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: .75rem;
+  color: #e72412;
+}
+#sidebar-wrapper
+{
+  background: #f5f7fa !important;
+}

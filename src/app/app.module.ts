@@ -18,6 +18,12 @@ import { ContactusComponent } from './contactus/contactus.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrModule } from 'ngx-toastr';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { DashboredComponent } from './dashbored/dashbored.component';
+import { CustompipePipe } from './custompipe.pipe';
+import { SafePipe } from './safe.pipe';
 
 
 @NgModule({
@@ -29,9 +35,15 @@ import { ToastrModule } from 'ngx-toastr';
     SettingsComponent,
     AboutComponent,
     BlogComponent,
-    ContactusComponent
+    ContactusComponent,
+    RegisterComponent,
+    LoginComponent,
+    DashboredComponent,
+    CustompipePipe,
+    SafePipe,
   ],
   imports: [
+    SocialLoginModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
@@ -41,9 +53,23 @@ import { ToastrModule } from 'ngx-toastr';
     CarouselModule,
     ReactiveFormsModule,
     NgxSpinnerModule,
+    GoogleSigninButtonModule,
     ToastrModule.forRoot(), // ToastrModule added
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('497534396285-pnfls1lmv0u10ncuetfoc87a07e14vqd.apps.googleusercontent.com'),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

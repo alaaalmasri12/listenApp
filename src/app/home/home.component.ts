@@ -54,8 +54,8 @@ export class HomeComponent implements OnInit {
         console.log(data, 'Acssestoken');
         this.access_token = data.access_token;
         if (this.access_token != null) {
-          localStorage.setItem('usertoken', this.access_token);
-          console.log(localStorage.getItem('usertoken'), 'localstorage');
+          localStorage.setItem('Spotifyusertoken', this.access_token);
+          console.log(localStorage.getItem('Spotifyusertoken'), 'localstorage');
         }
       },
     });

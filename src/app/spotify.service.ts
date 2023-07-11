@@ -12,6 +12,7 @@ export class SpotifyService {
   tokenUrl: string = "https://accounts.spotify.com/api/token";
   artistsurl:string="https://api.spotify.com/v1/artists/1Xyo4u8uXC1ZmMpatF05PJ/related-artists"
   idAndSecret: string = btoa(this.client_id + ":" + this.client_secret);
+  topatracks:string="https://api.spotify.com/v1/playlists/37i9dQZEVXbNG2KDcFcKOF"
   constructor(private _httpclient:HttpClient) {
  
     this.SaveTokenUser()
@@ -19,11 +20,7 @@ export class SpotifyService {
    options = {
     headers: new HttpHeaders({
         'Authorization': 'Basic '.concat(this.idAndSecret),
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Access-Control-Allow-Origin':"*",
-        "Access-Control-Allow-Credentials":"true",
-        "Access-Control-Allow-Methods":"GET,HEAD,OPTIONS,POST,PUT",
-        "Access-Control-Allow-Headers":"Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
+        'Content-Type': 'application/x-www-form-urlencoded'
     })
 };
    SaveTokenUser():Observable<any>
@@ -31,11 +28,23 @@ export class SpotifyService {
   var   body = 'grant_type=client_credentials';    
     return this._httpclient.post(this.tokenUrl,body,this.options)
   }
+  gettoptracks():Observable<any>
+    {
+      return this._httpclient.get(this.topatracks,{
+        headers:{
+          Authorization:'Bearer '+localStorage.getItem('Spotifyusertoken')
+        }
+    })
+  }
   getArtists(): Observable<any>{
     return this._httpclient.get(this.artistsurl,{
       headers:{
-        Authorization:'Bearer '+localStorage.getItem('usertoken')
+        Authorization:'Bearer '+localStorage.getItem('Spotifyusertoken')
       }
     })
+
+    
+  
+
   }
 }
