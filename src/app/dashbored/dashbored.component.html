@@ -103,20 +103,43 @@
         </nav>
         </div>
         <div class="col-lg-12 dashboredcontent">
-          <p>LISTEN TOP CHARTS</p>
-          <h2 class="">Top <span class="text-primary">Charts</span></h2>
+          <div class="container">
+          <p class="pb-3">LISTEN TOP CHARTS</p>
+          <h2 class="pb-3">Top <span class="text-primary">Charts</span></h2>
 
           <div class="topcharts">
             <div class="row">
-              <div class="col-lg-3" *ngFor="let track of tracks">
-                <iframe style="border-radius:12px" [src]="track.track.href | safe" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              <div class="col-lg-12" >
+                <owl-carousel-o [options]="customOptions" class="chartslider" >
+                  <ng-container  *ngFor="let track of tracks;index as i;"   >
+                      <ng-template      carouselSlide [id]="track.added_by.id">
+                        <div     *ngFor="let image of track.track.album.images.slice(0,1);index as i">
+
+                              <div class="chart-image text-center">
+                                <img  [src]="image.url">
+                      <!-- <iframe style="border-radius:12px" [src]="track.track.href | safe" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+
+                              </div>
+                              </div>
+                              <div class="song-title pt-3">
+                                <a href="song-details.html" class="cover__title black " style="font-weight:bold; ;">{{track.track.name}}</a>
+                              </div>
+                      </ng-template>
+                    </ng-container>
+              
+                </owl-carousel-o>
+                <!-- <iframe style="border-radius:12px" [src]="track.track.href | safe" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
               </div>
             </div>
           </div>
           <div class="music-box">
+            
+            <!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6WzRpISELf3YglGAh7TXcG?si=caa7fe3c089d4518" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+
           </div>
         </div>
       </div>
+    </div>
   </section>
 </div>
 </div>

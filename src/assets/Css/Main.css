@@ -476,7 +476,7 @@ line-height: 30px
 
 }
 .owl-theme .owl-dots .owl-dot {
-  margin-top: 45px !important;
+  margin-top: 45px;
 }
 .owl-theme .owl-dots .owl-dot span {
   width: 20px !important;
@@ -947,3 +947,6 @@ color: rgb(87, 89, 91)
 {
   background: #f5f7fa !important;
 }
+.chartslider  .owl-dot {
+  margin-top: 0px !important;
+  }

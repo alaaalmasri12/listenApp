@@ -79,6 +79,7 @@ export class LoginComponent {
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.showSuccess();
+      console.log("token",data.access_token)
       localStorage.setItem("usertoken",data.access_token)
       this._authservice.SaveCureentUser();
       this._router.navigate(['/dashbored'])
