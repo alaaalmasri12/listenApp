@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+          <th>Student ID</th>
+          <th>Full Name</th>
+          <th>Class</th>
+          <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataItem of UsersList">
+        <td>{{dataItem.Id}}</td>
+        <td>{{dataItem.username}}</td>
+        <td>{{dataItem.Class}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          (click)="EditUsers(dataItem)">Edit</button>
+            <button type="button" class="btn btn-primary" (click)="deleteClick(dataItem)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

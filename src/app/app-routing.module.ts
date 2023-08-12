@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboredComponent } from './dashbored/dashbored.component';
 import { AuthGuardService } from './auth-guard-service.guard';
+import { UsersService } from './users.service';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   {path:'',pathMatch:'full',redirectTo:'home'},
@@ -22,7 +24,8 @@ const routes: Routes = [
   {path:'Contactus',component:ContactusComponent,title:'Contact us - Angular Music Streaming App'},
   {path:'Register',component:RegisterComponent,title:'Register  - Angular Music Streaming App'},
   {path:'login',component:LoginComponent,title:'Login  - Angular Music Streaming App'},
-  {path:'dashbored',canActivate:[AuthGuardService], component:DashboredComponent,title:'Dashnored  - Angular Music Streaming App'}
+  {path:'dashbored',canActivate:[AuthGuardService], component:DashboredComponent,title:'Dashnored  - Angular Music Streaming App'},
+  {path:'users', component:UsersComponent,title:'users  - Angular Music Streaming App'}
 
 ];
 interface NgxSpinnerConfig {

@@ -24,6 +24,7 @@ import { GoogleLoginProvider, GoogleSigninButtonModule, SocialAuthServiceConfig,
 import { DashboredComponent } from './dashbored/dashbored.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { SafePipe } from './safe.pipe';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { SafePipe } from './safe.pipe';
     DashboredComponent,
     CustompipePipe,
     SafePipe,
+    UsersComponent,
   ],
   imports: [
     SocialLoginModule,
